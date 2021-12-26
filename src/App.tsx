@@ -1,33 +1,13 @@
-import './App.css';
-
-function App() {
+import React, { useState, useEffect } from 'react'; 
+import { ChakraProvider } from '@chakra-ui/react';
+import Header from './Components/Header';
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <div style={{marginTop: '-5em'}}>
-          <svg width="228" height="412" viewBox="0 0 228 412" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M118.156 239.328L89.3281 267.734V341H72.0312V136.25H89.3281V246.641L194.234 136.25H216.031L130.25 227.375L222.641 341H201.547L118.156 239.328Z" fill="white"/>
-            <path d="M56.6797 287.305H144.448V300H41.543V122.266H56.6797V287.305Z" fill="white"/>
-            <path d="M211.922 282.328C208.667 312.276 197.924 335.193 179.695 351.078C161.596 366.964 137.443 374.906 107.234 374.906C86.1406 374.906 67.4557 369.633 51.1797 359.086C35.0339 348.539 22.5339 333.63 13.6797 314.359C4.82552 294.958 0.333333 272.823 0.203125 247.953V211.039C0.203125 185.779 4.63021 163.383 13.4844 143.852C22.3385 124.32 35.0339 109.281 51.5703 98.7344C68.237 88.0573 87.3776 82.7188 108.992 82.7188C139.461 82.7188 163.484 90.987 181.062 107.523C198.771 123.93 209.057 146.651 211.922 175.688H187.703C181.714 127.38 155.477 103.227 108.992 103.227C83.2109 103.227 62.638 112.862 47.2734 132.133C32.0391 151.404 24.4219 178.031 24.4219 212.016V246.781C24.4219 279.594 31.8438 305.766 46.6875 325.297C61.6615 344.828 81.8438 354.594 107.234 354.594C132.365 354.594 151.31 348.604 164.07 336.625C176.831 324.516 184.708 306.417 187.703 282.328H211.922Z" fill="white"/>
-          </svg>
-        </div>
-
-
-
-        <p>
-          Kennedy consultoria (em construção)
-        </p>
-        <a
-          className="App-link"
-          href="https://www.instagram.com/lopesconsultor123/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Saiba mais
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <div className="App">
+        <Header/>
+      </div>
+    </ChakraProvider>
   );
 }
 
