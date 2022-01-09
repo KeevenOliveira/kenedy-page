@@ -7,7 +7,7 @@ import { Title } from '../../styles';
 export default function Cards() {
 
     const property = {
-        imageUrl: 'https://lh3.googleusercontent.com/zPRwySU0pOfy4CteUs0nRk-ZT5n2YbqxuyPA8OvgrYR_u80-LIFujmryF_2iLq_psXU8edd2tam72ImfoAcNjhv6ij9OSuk7slPUAUSa7NwStqRW2m9XhiQbSp1udaiCZYH1fIzfCvAK0QefifPGpWABcba7FJ-3HOmruLlDDFIAcpjba6bymIR86PBHVHskrllWXP79ePenwqUh-xPgKIPHsu9XKV6C7nz0faDRFZaG0VlmpzCnj3S16OMABygIK8_DpZjpxTpbjL7rLuh9sW7W-Ff1F67nVi0SIgrL2YTLvJjWkYpdA9CD_rzzKzOJrhs5HJq9rYo_XoXQf8i4QRg6YfSzv50hbfiOlHAfXIh91FlH6wKSQAXf3k5kwk-y8fJD7LNTSWYCEN1wiiPU1n6vtdryajRsnCiUE7wgNFySiu0O80wzAANdmnhHKeNLiQhxYGab9GC8Yq2ftMuAdqYIbfD3jaemMDeGfcazwuctlPIxfNj9tGIghNzj4wlioJH0SgBwgh-l14IUiL_f5-ZTyVs9rzO-Rvqbuq39VHYIiOzHPlUU9RVFIrOGOThP26eYKcpnAuzVqOLVJrndRm6LcwKAhshq9vFCI7t9zveENjEFg1vXJXbf0LKgD53TkuchOpzZjVJKTEDJDpevTcEq0vig3Fa70OQ0i0YIdE5Q7Tsu_hJEELWDgdm0qtnlURsToPrwOJgVv6YDV68yJp3Q=s1041-no?authuser=0',
+        imageUrl: 'https://bit.ly/2Z4KKcF',
         imageAlt: 'Rear view of modern home with pool',
         beds: 3,
         baths: 2,
