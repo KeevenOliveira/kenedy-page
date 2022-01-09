@@ -6,10 +6,12 @@ import Head from 'next/head'
 // import Image from 'next/image'
 import { Container } from '../styles';
 import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const Home: NextPage = () => {
   return (
     <>
+      <Header navigation={"Home"} />
       <Container>
         <CarouselMain />
         <Cards />

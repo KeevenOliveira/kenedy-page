@@ -1,3 +1,11 @@
+
+import Header from '../components/Header';
+
 export default function About() {
-    return <h1>Sobre</h1>
+    return (
+        <>
+            <Header navigation={"About"} />
+            <h1>Sobre</h1>
+        </>
+    )
 }

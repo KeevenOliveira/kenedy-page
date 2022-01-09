@@ -1,3 +1,10 @@
+import Header from '../components/Header';
+
 export default function Contato() {
-    return <h1>Contato</h1>
+    return (
+        <>
+            <Header navigation={"Contact"} />
+            <h1>Contato</h1>
+        </>
+    )
 }
