@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { Button } from '@chakra-ui/react';
 import { Container, HeaderStyle, Logo, ContainerButtons } from './styles';
 
-interface HeaderDTO {
+interface IHeader {
     navigation: String,
 }
 
-export default function Header(props: HeaderDTO) {
+export default function Header(props: IHeader) {
 
     return (
         <Container>
