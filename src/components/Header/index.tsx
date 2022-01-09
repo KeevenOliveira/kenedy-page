@@ -1,9 +1,13 @@
 
 import Link from 'next/link'
+import { useState } from 'react';
 import { Button } from '@chakra-ui/react';
 import { Container, HeaderStyle, Logo, ContainerButtons } from './styles';
 
 export default function Header() {
+
+    const [visible, setVisible] = useState("Home");
+
     return (
         <Container>
             <Logo>
@@ -14,10 +18,18 @@ export default function Header() {
                 </svg>
             </Logo>
             <ContainerButtons>
-                <Link href="/" passHref><Button className='first-btn' isActive={true} color={"#FFF"} variant='link'>Home</Button></Link>
-                <Link href="/contact" passHref><Button color={"#FFF"} variant='link'>Contato</Button></Link>
-                <Link href="/posts" passHref><Button className='third-btn' color={"#FFF"} variant='link'>Posts</Button></Link>
-                <Link href="/about" passHref><Button color={"#FFF"} variant='link'>Sobre</Button></Link>
+                <Link href="/" passHref>
+                    <Button className='first-btn' isActive={visible === "Home"} onClick={() => setVisible("Home")} color={"#FFF"} variant='link'>Home</Button>
+                </Link>
+                <Link href="/contact" passHref>
+                    <Button color={"#FFF"} onClick={() => setVisible("Contact")} isActive={visible === "Contact"} variant='link'>Contato</Button>
+                </Link>
+                <Link href="/posts" passHref>
+                    <Button className='third-btn' onClick={() => setVisible("Posts")} isActive={visible === "Posts"} color={"#FFF"} variant='link'>Posts</Button>
+                </Link>
+                <Link href="/about" passHref>
+                    <Button color={"#FFF"} onClick={() => setVisible("About")} isActive={visible === "About"} variant='link'>Sobre</Button>
+                </Link>
                 <a href='https://api.whatsapp.com/send?phone=5581982687667&text=Ol%C3%A1%2C%20tudo%20bem%20Kennedy%3F%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20apartamento%20da%20direcional%20engenharia.'>
                     <Button color={"#FFF"} marginEnd={5} colorScheme='teal' variant='solid' >Fale comigo</Button>
                 </a>
