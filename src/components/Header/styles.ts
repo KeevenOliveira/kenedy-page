@@ -29,5 +29,13 @@ export const ContainerButtons = styled.main`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid red; */
+
+    @media(max-width: 550px) {
+        button.first-btn {
+            margin-left: 1em;
+        }
+        button.third-btn {
+            display: none;
+        }
+    }
 `;
