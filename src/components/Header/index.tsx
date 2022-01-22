@@ -2,14 +2,11 @@
 import Link from 'next/link'
 import { useState } from 'react';
 import { Button } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 import { Container, HeaderStyle, Logo, ContainerButtons } from './styles';
-
-interface IHeader {
-    navigation: String,
-}
-
-export default function Header(props: IHeader) {
-
+import { ActiveLinkStyle } from '../ActiveLinkStyle';
+export default function Header() {
+    const { asPath } = useRouter();
     return (
         <Container>
             <Logo>
@@ -20,42 +17,10 @@ export default function Header(props: IHeader) {
                 </svg>
             </Logo>
             <ContainerButtons>
-                {props.navigation === "Home" ?
-                    <Link href="/" passHref>
-                        <Button className='first-btn' isActive={true} color={"#FFF"} variant='link'>Home</Button>
-                    </Link>
-                    :
-                    <Link href="/" passHref>
-                        <Button className='first-btn' color={"#FFF"} variant='link'>Home</Button>
-                    </Link>
-                }
-                {props.navigation === "Contact" ?
-                    <Link href="/contact" passHref>
-                        <Button color={"#FFF"} isActive={true} variant='link'>Contato</Button>
-                    </Link>
-                    :
-                    <Link href="/contact" passHref>
-                        <Button color={"#FFF"} variant='link'>Contato</Button>
-                    </Link>
-                }
-                {props.navigation === "Posts" ?
-                    <Link href="/posts" passHref>
-                        <Button className='third-btn' isActive={true} color={"#FFF"} variant='link'>Posts</Button>
-                    </Link>
-                    :
-                    <Link href="/posts" passHref>
-                        <Button className='third-btn' color={"#FFF"} variant='link'>Posts</Button>
-                    </Link>
-                }
-                {props.navigation === "About" ?
-                    <Link href="/about" passHref>
-                        <Button color={"#FFF"} isActive={true} variant='link'>Sobre</Button>
-                    </Link>
-                    :
-                    <Link href="/about" passHref>
-                        <Button color={"#FFF"} variant='link'>Sobre</Button>
-                    </Link>
-                }
+                <ActiveLinkStyle active={asPath === '/'} title='Home' href='/' />
+                <ActiveLinkStyle active={asPath === '/contact'} title='Contato' href='/contact' />
+                <ActiveLinkStyle active={asPath === '/posts'} title='Posts' href='/posts' />
+                <ActiveLinkStyle active={asPath === '/about'} title='Sobre' href='/about' />
                 <a href='https://api.whatsapp.com/send?phone=5581982687667&text=Ol%C3%A1%2C%20tudo%20bem%20Kennedy%3F%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20apartamento%20da%20direcional%20engenharia.'>
                     <Button color={"#FFF"} marginEnd={5} colorScheme='teal' variant='solid' >Fale comigo</Button>
                 </a>
