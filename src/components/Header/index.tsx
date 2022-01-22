@@ -17,14 +17,13 @@ export default function Header() {
                 </svg>
             </Logo>
             <ContainerButtons>
-                <ActiveLinkStyle active={asPath === '/'} title='Home' href='/' />
+                <ActiveLinkStyle className='first-btn' active={asPath === '/'} title='Home' href='/' />
                 <ActiveLinkStyle active={asPath === '/contact'} title='Contato' href='/contact' />
-                <ActiveLinkStyle active={asPath === '/posts'} title='Posts' href='/posts' />
+                <ActiveLinkStyle className='third-btn' active={asPath === '/posts'} title='Posts' href='/posts' />
                 <ActiveLinkStyle active={asPath === '/about'} title='Sobre' href='/about' />
                 <a href='https://api.whatsapp.com/send?phone=5581982687667&text=Ol%C3%A1%2C%20tudo%20bem%20Kennedy%3F%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20apartamento%20da%20direcional%20engenharia.'>
                     <Button color={"#FFF"} marginEnd={5} colorScheme='teal' variant='solid' >Fale comigo</Button>
                 </a>
-
             </ContainerButtons>
 
         </Container>
