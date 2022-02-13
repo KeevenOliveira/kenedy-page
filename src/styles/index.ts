@@ -4,9 +4,14 @@ export const Container = styled.main`
 
 `;
 
-export const Title = styled.h1`
-    font-size: 2em;
-    font-weight: 600;
+interface ITitle {
+    size?: string;
+    weight?: number;
+}
+
+export const Title = styled.h1<ITitle>`
+    font-size: ${(props) => props.size ? props.size : '2em'};
+    font-weight: ${(props) => props.weight ? props.weight : 600};
     margin-bottom: 0.5em;
 `;
 
@@ -22,5 +27,41 @@ export const FloatingWhatsApp = styled.a`
     background-color: #00E676,
     right: 20px,
     bottom: 40px,
-    box-shadow: 1px 1px 2px #888
+    box-shadow: 1px 1px 2px #888;
+`;
+
+interface IText {
+    size?: string;
+    color?: string;
+    marginLeft?: string;
+    marginRight?: string;
+    margin?: string;
+}
+
+export const Text = styled.p<IText>`
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+    font-size: ${(props) => props.size ? props.size : '1.125em'}
+    font-weight: lighter;
+    color: ${(props)=> props.color? props.color: 'initial'};
+    margin ${(props)=> props.margin ? props.margin : 'initial'};
+    margin-left: ${(props)=> props.marginLeft ? props.marginLeft : 'initial'};
+    margin-right: ${(props)=> props.marginRight ? props.marginRight: 'initial'};
+`;
+
+export const Dot = styled.div`
+   width : 5px;
+   height: 5px;
+   background: #000;
+   border-radius:50%;
+   margin-left: 10px;
+`;
+
+export const LinkWhatsApp = styled.a`
+    svg {
+        transition: color 0.3s;
+    }
+    svg:hover{
+        color: #FFF;
+    }
 `;
